@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { getAgentData } from "@/lib/agent-actions";
-import { AgentRegistrationForm } from "@/components/agent-registration-form";
+import { getMyAgents } from "@/lib/agent-actions";
+import { AgentRegistrationForm } from "@/app/my-agents/components/agent-registration-form";
 
 import type { Agent } from "@space-traders-console/spacetraders-sdk";
 
@@ -63,7 +63,7 @@ async function AgentsList({ agents }: { agents: Agent[] }) {
 }
 
 export default async function AgentPage() {
-  const agents = await getAgentData();
+  const agents = await getMyAgents();
 
   return (
     <div className="container mx-auto p-4 space-y-8">

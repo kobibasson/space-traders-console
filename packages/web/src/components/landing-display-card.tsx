@@ -21,7 +21,7 @@ export function LandingDisplayCard() {
         <p className="mb-6 text-center">
           Welcome, intrepid space explorer! Begin your journey by managing your agents.
         </p>
-        <Link href="/agent" passHref>
+        <Link href="/my-agents" passHref>
           <Button size="lg">Go to My Agents</Button>
         </Link>
       </CardContent>
